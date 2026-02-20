@@ -45,4 +45,22 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // User's chatbots
+    public function chatbots()
+    {
+        return $this->hasMany(Chatbot::class);
+    }
+
+    // Conversations started by user
+    public function conversations()
+    {
+        return $this->hasMany(Conversation::class);
+    }
+
+    // User files
+    public function files()
+    {
+        return $this->hasMany(File::class);
+    }
 }

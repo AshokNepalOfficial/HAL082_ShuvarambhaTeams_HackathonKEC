@@ -60,12 +60,40 @@
 
                 {{-- Users --}}
                 @if(Route::has('users.index'))
-                <a href="{{ route('users.index') }}"
-                   class="nav-item flex items-center gap-3 {{ request()->routeIs('users.*') ? 'active' : '' }}">
-                    <span class="font-medium">Users</span>
-                </a>
+                    <div class="nav-item flex items-center gap-3 {{ request()->routeIs('users.*') ? 'active' : '' }}">
+                        <svg class="w-6 h-6 text-[var(--accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 010 7.75"></path>
+                        </svg>
+                        <a href="{{ route('users.index') }}"><span class="font-medium">Users</span></a>
+                        
+                    </div>
                 @endif
 
+
+                {{-- File Manager --}}
+                @if(Route::has('file-manager.index'))
+                    <div class="nav-item flex items-center gap-3 {{ request()->routeIs('file-manager.*') ? 'active' : '' }}">
+                        <svg class="w-9 h-9 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+                        </svg>
+                        <a href="{{ route('file-manager.index') }}"><span class="font-medium">File Manager</span></a>
+                        
+                    </div>
+                @endif
+
+                {{-- Chatbots --}}
+                @if(Route::has('chatbots.index'))
+                    <div class="nav-item flex items-center gap-3 {{ request()->routeIs('chatbots.*') ? 'active' : '' }}">
+                        <svg class="w-9 h-9 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+                        </svg>
+                        <a href="{{ route('chatbots.index') }}"><span class="font-medium">File Manager</span></a>
+                        
+                    </div>
+                @endif
             </div>
         </div>
 

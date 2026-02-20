@@ -14,6 +14,7 @@
         rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
     <script>
         tailwind.config = {
             theme: {
@@ -453,6 +454,7 @@
 
     <!-- Toast Container -->
     <div class="fixed bottom-4 right-4 z-300 flex flex-col gap-2" id="toastContainer"></div>
+    @livewireScripts
 </body>
 
 </html>

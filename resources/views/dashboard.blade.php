@@ -9,7 +9,7 @@
                 <!-- 1. Header & Description (Always Order 1) -->
                 <div class="order-1">
                     <h1 class="font-display text-2xl lg:text-3xl font-bold text-[var(--fg-primary)]">
-                        User Management
+                       Dashboard
                     </h1>
                     <!-- Visible only on Desktop -->
                     <p class="hidden sm:block text-[var(--fg-secondary)] mt-1">

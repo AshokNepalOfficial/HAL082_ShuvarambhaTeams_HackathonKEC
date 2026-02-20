@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+use Database\Seeders\FileTypeSeeder;
 use Database\Seeders\UserSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -16,6 +17,8 @@ class DatabaseSeeder extends Seeder
     {
       $this->call([
             UserSeeder::class,
+            VectorstoreQualityTypeSeeder::class,
+            FileTypeSeeder::class,
         ]);
     }
 }
