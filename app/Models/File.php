@@ -19,6 +19,7 @@ class File extends Model
         'is_vectorized',
         'path',
         'folder_id',
+        'filesize',
     ];
 
     /**

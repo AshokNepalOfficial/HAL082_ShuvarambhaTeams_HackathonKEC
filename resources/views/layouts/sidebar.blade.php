@@ -61,7 +61,7 @@
                 {{-- Users --}}
                 @if(Route::has('users.index'))
                     <div class="nav-item flex items-center gap-3 {{ request()->routeIs('users.*') ? 'active' : '' }}">
-                        <svg class="w-6 h-6 text-[var(--accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
                             <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
@@ -76,8 +76,20 @@
                 {{-- File Manager --}}
                 @if(Route::has('file-manager.index'))
                     <div class="nav-item flex items-center gap-3 {{ request()->routeIs('file-manager.*') ? 'active' : '' }}">
-                        <svg class="w-9 h-9 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+                        <svg class="w-6 h-6" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            stroke-width="2" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round">
+
+                            <!-- Folder body -->
+                            <path d="M3 7h5l2 2h11v9a2 2 0 0 1-2 2H3z"></path>
+
+                            <!-- Folder top -->
+                            <path d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"></path>
+
                         </svg>
                         <a href="{{ route('file-manager.index') }}"><span class="font-medium">File Manager</span></a>
                         
@@ -87,10 +99,30 @@
                 {{-- Chatbots --}}
                 @if(Route::has('chatbots.index'))
                     <div class="nav-item flex items-center gap-3 {{ request()->routeIs('chatbots.*') ? 'active' : '' }}">
-                        <svg class="w-9 h-9 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+                       <svg class="w-6 h-6" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            stroke-width="2" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round">
+
+                            <!-- Antenna -->
+                            <line x1="12" y1="2" x2="12" y2="5"></line>
+                            <circle cx="12" cy="2" r="1"></circle>
+
+                            <!-- Head -->
+                            <rect x="4" y="6" width="16" height="12" rx="3"></rect>
+
+                            <!-- Eyes -->
+                            <circle cx="9" cy="12" r="1"></circle>
+                            <circle cx="15" cy="12" r="1"></circle>
+
+                            <!-- Mouth -->
+                            <line x1="9" y1="16" x2="15" y2="16"></line>
+
                         </svg>
-                        <a href="{{ route('chatbots.index') }}"><span class="font-medium">File Manager</span></a>
+                        <a href="{{ route('chatbots.index') }}"><span class="font-medium">Chatbots</span></a>
                         
                     </div>
                 @endif

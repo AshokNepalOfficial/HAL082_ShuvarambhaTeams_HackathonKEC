@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->text('description')->nullable();
+            $table->json('configurations')->nullable(); 
             $table->enum('status', ['draft', 'published'])->default('draft');
             $table->timestamps();
         });

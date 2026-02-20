@@ -37,102 +37,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-6">
-            <div class="card lg:p-5 p-3 animate-in stagger-1">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <p class="text-[var(--fg-secondary)] text-sm font-medium">Total Users</p>
-                        <p class="font-display text-2xl lg:text-3xl font-bold mt-1" data-count="128459">128,459</p>
-                        <div class="flex items-center gap-1 mt-2 text-[var(--accent)]">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
-                                <path d="M17 6h6v6"></path>
-                            </svg>
-                            <span class="text-sm font-medium">+12.5%</span>
-                        </div>
-                    </div>
-                    <div class="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-[var(--accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 010 7.75"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card lg:p-5 p-3 animate-in stagger-2">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <p class="text-[var(--fg-secondary)] text-sm font-medium">Active</p>
-                        <p class="font-display text-2xl lg:text-3xl font-bold mt-1" data-count="892340">892,340</p>
-                        <div class="flex items-center gap-1 mt-2 text-[var(--accent)]">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
-                                <path d="M17 6h6v6"></path>
-                            </svg>
-                            <span class="text-sm font-medium">+8.2%</span>
-                        </div>
-                    </div>
-                    <div class="w-12 h-12 rounded-xl bg-[var(--info)]/10 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-[var(--info)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card lg:p-5 p-3 animate-in stagger-3">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <p class="text-[var(--fg-secondary)] text-sm font-medium">Pending</p>
-                        <p class="font-display text-2xl lg:text-3xl font-bold mt-1">32.4%</p>
-                        <div class="flex items-center gap-1 mt-2 text-[var(--accent)]">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M23 18l-9.5-9.5-5 5L1 6"></path>
-                                <path d="M17 18h6v-6"></path>
-                            </svg>
-                            <span class="text-sm font-medium">-4.1%</span>
-                        </div>
-                    </div>
-                    <div class="w-12 h-12 rounded-xl bg-[var(--warning)]/10 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-[var(--warning)]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card lg:p-5 p-3 animate-in stagger-4">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <p class="text-[var(--fg-secondary)] text-sm font-medium">Today</p>
-                        <p class="font-display text-2xl lg:text-3xl font-bold mt-1">4m 32s</p>
-                        <div class="flex items-center gap-1 mt-2 text-[var(--accent)]">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
-                                <path d="M17 6h6v6"></path>
-                            </svg>
-                            <span class="text-sm font-medium">+18.7%</span>
-                        </div>
-                    </div>
-                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Table Section  -->
 
         <div class="card overflow-hidden">
@@ -200,21 +104,43 @@
                         @endif
                     </div>
 
+
+
+                    <div id="selectionBar" class="flex items-center space-x-2 pl-4 border-l border-[var(--border)] hidden">
+                        <span class="text-xs font-medium text-[var(--fg-secondary)]">
+                            <span id="selectedCount">0</span> items selected
+                            <span id="excludedCount" class="text-[var(--warning)]" style="display:none;">(0 excluded)</span>
+                        </span>
+
+                        <div class="h-4 w-px bg-[var(--border)] mx-2"></div>
+
+                        <button id="openChatbotModal" class="bg-[var(--accent)] hover:bg-[var(--accent-dim)] text-[var(--fg-primary)] px-4 py-1.5 rounded-full text-xs font-bold shadow-lg shadow-[var(--accent-glow)] flex items-center">
+                            <i class="fa-solid fa-robot mr-2"></i> Create Chatbot
+                        </button>
+
+                        <button class="bg-[var(--bg-primary)] border border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--accent)] text-[var(--fg-primary)] px-3 py-1.5 rounded-full text-xs font-bold flex items-center transition">
+                            <i class="fa-solid fa-sliders mr-2"></i> Bulk Vector Settings
+                        </button>
+
+                        <button id="clearSelection" class="p-2 text-[var(--fg-muted)] hover:text-[var(--danger)]" title="Clear Selection">
+                            <i class="fa-solid fa-xmark text-sm"></i>
+                        </button>
+                    </div>
                     <div class="relative group">
 
-                            <select id="attachSelect" class="peer appearance-none input-field pr-10 cursor-pointer">
-                                <option value="">Attach</option>
-                                <option value="file">File</option>
-                                <option value="folder">Folder</option>
-                            </select>
-                            <span
-                                class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[var(--fg-muted)] transition-transform duration-300 peer-focus:-rotate-180">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </span>
-                        </div>
-                    
+                        <select id="attachSelect" class="peer appearance-none input-field pr-10 cursor-pointer">
+                            <option value="">Attach</option>
+                            <option value="file">File</option>
+                            <option value="folder">Folder</option>
+                        </select>
+                        <span
+                            class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[var(--fg-muted)] transition-transform duration-300 peer-focus:-rotate-180">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </div>
+
 
                     <!-- Export (30% mobile) -->
                     <div class="col-span-3 lg:order-last">
@@ -244,7 +170,7 @@
                     <tbody id="userTableBody">
                         @forelse($items as $item)
 
-                        <tr class="table-row border-b border-[var(--border)] last:border-0">
+                        <tr data-id="{{ $item->id }}" class="table-row border-b border-[var(--border)] last:border-0">
                             <td class="p-4"><input type="checkbox" class="custom-checkbox"></td>
                             <td class="p-4">
                                 <div class="flex items-center gap-3">
@@ -326,262 +252,397 @@
 
 
 
-<!-- Attach Modal -->
-<div id="attachModal" class="modal-overlay">
 
-    <div class="card w-full max-w-md p-6 relative">
 
-        <!-- Header -->
-        <div class="flex items-center justify-between mb-6">
-            <h2 id="modalTitle" class="font-display text-xl font-semibold">
-                Attach
-            </h2>
 
-            <button type="button"
-                    onclick="closeModal()"
-                    class="text-[var(--fg-muted)] hover:text-[var(--fg-primary)] transition">
-                ✕
-            </button>
-        </div>
+<!-- Chatbot Modal (Initially Hidden) -->
+<div id="chatbotModal" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50 hidden">
+    <div class="bg-[var(--bg-card)] p-6 rounded-lg w-96">
+        <h3 class="text-[var(--fg-primary)] font-bold mb-4">Create Chatbot</h3>
+        <form id="chatbotForm">
+            @csrf
+            <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+            
+            <label class="block text-[var(--fg-secondary)] text-sm mb-1">Chatbot Name</label>
+            <input type="text" name="name" required
+                class="w-full p-2 rounded-md text-[var(--fg-primary)] bg-[var(--bg-secondary)] border border-[var(--border)] mb-4">
 
-        <form id="attachForm" class="space-y-5">
-
-            <!-- FILE SECTION -->
-            <div id="fileSection" class="hidden space-y-4">
-
-                <!-- File -->
-                <div>
-                    <label class="text-sm text-[var(--fg-secondary)] block mb-2">
-                        Select File
-                    </label>
-
-                    <input type="file"
-                           id="fileInput"
-                           name="file"
-                           class="input-field cursor-pointer" />
-                </div>
-
-                <!-- File Type -->
-                <div>
-                    <label class="text-sm text-[var(--fg-secondary)] block mb-2">
-                        File Type
-                    </label>
-
-                    <select id="filetype_id" class="input-field">
-                        <option value="">Select Type</option>
-                        @foreach($fileTypes as $type)
-                            <option value="{{ $type->id }}">
-                                {{ $type->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <!-- Vectorstore Quality -->
-                <div>
-                    <label class="text-sm text-[var(--fg-secondary)] block mb-2">
-                        Vectorstore Quality
-                    </label>
-
-                    <select id="vectorstore_quality_id" class="input-field">
-                        <option value="">Select Quality</option>
-                        @foreach($vectorQualities as $quality)
-                            <option value="{{ $quality->id }}">
-                                {{ $quality->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <!-- Is Vectorized -->
-                <div>
-                    <label class="text-sm text-[var(--fg-secondary)] block mb-2">
-                        Vectorize File?
-                    </label>
-
-                    <select id="is_vectorized" class="input-field">
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                    </select>
-                </div>
-
+            <div class="flex justify-end space-x-2">
+                <button type="button" id="closeChatbotModal" class="px-4 py-2 rounded bg-[var(--border)] text-[var(--fg-primary)] hover:bg-[var(--bg-elevated)]">Cancel</button>
+                <button type="submit" class="px-4 py-2 rounded bg-[var(--accent)] text-[var(--fg-primary)] hover:bg-[var(--accent-dim)]">Create</button>
             </div>
-
-            <!-- FOLDER SECTION -->
-            <div id="folderSection" class="hidden">
-                <label class="text-sm text-[var(--fg-secondary)] block mb-2">
-                    Folder Name
-                </label>
-
-                <input type="text"
-                       id="folderName"
-                       name="name"
-                       placeholder="Enter folder name..."
-                       class="input-field" />
-            </div>
-
-            <!-- Actions -->
-            <div class="flex justify-end gap-3 pt-2">
-                <button type="button"
-                        onclick="closeModal()"
-                        class="btn-ghost">
-                    Cancel
-                </button>
-
-                <button type="submit"
-                        class="btn-primary">
-                    Confirm
-                </button>
-            </div>
-
         </form>
     </div>
 </div>
 
-
-
-
+<!-- 4️⃣ FINAL SCRIPT -->
 <script>
-const attachSelect = document.getElementById("attachSelect");
-const modal = document.getElementById("attachModal");
-const fileSection = document.getElementById("fileSection");
-const folderSection = document.getElementById("folderSection");
-const modalTitle = document.getElementById("modalTitle");
-const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    // Track selected items
+    const selected = { files: [], folders: [] };
 
-function getCurrentFolderId() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('folder_id');
-}
+    const selectionBar = document.getElementById('selectionBar');
+    const selectedCountEl = document.getElementById('selectedCount');
+    const clearBtn = document.getElementById('clearSelection');
 
-attachSelect.addEventListener("change", function () {
+    const checkboxes = document.querySelectorAll('#userTableBody .custom-checkbox');
+    const topCheckbox = document.querySelector('thead .custom-checkbox');
 
-    if (this.value === "file") {
-        openModal();
-        fileSection.classList.remove("hidden");
-        folderSection.classList.add("hidden");
-        modalTitle.innerText = "Upload File";
-    }
+    function updateSelection() {
+        selected.files = [];
+        selected.folders = [];
 
-    if (this.value === "folder") {
-        openModal();
-        folderSection.classList.remove("hidden");
-        fileSection.classList.add("hidden");
-        modalTitle.innerText = "Create Folder";
-    }
+        let folderSelectedCount = 0;
+        let totalSelected = 0;
 
-    this.value = "";
-});
+        checkboxes.forEach(cb => {
+            if (cb.checked) {
+                const tr = cb.closest('tr');
+                const type = tr.querySelector('td:nth-child(3) span').textContent.trim().toLowerCase();
+                const id = tr.dataset.id;
 
-function openModal() {
-    modal.classList.add("active");
-}
-
-function closeModal() {
-    modal.classList.remove("active");
-    document.getElementById("attachForm").reset();
-}
-
-modal.addEventListener("click", function (e) {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
-document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-        closeModal();
-    }
-});
-
-document.getElementById("attachForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const folderId = getCurrentFolderId();
-    const isFileUpload = !fileSection.classList.contains("hidden");
-
-    try {
-
-        // ======================
-        // FILE UPLOAD
-        // ======================
-        if (isFileUpload) {
-
-            if (!folderId) {
-                alert("Open a folder before uploading a file.");
-                return;
+                if (type === 'folder') {
+                    selected.folders.push(id);
+                    folderSelectedCount++;
+                } else {
+                    selected.files.push(id);
+                }
+                totalSelected++;
             }
+        });
 
-            const fileInput = document.getElementById("fileInput");
-            const filetypeId = document.getElementById("filetype_id").value;
-            const vectorQualityId = document.getElementById("vectorstore_quality_id").value;
-            const isVectorized = document.getElementById("is_vectorized").value;
+        // Show action bar only if at least one folder is selected
+        selectionBar.classList.toggle('hidden', folderSelectedCount === 0);
 
-            if (!fileInput.files.length) {
-                alert("Please select a file.");
-                return;
-            }
+        // Update total selected count
+        selectedCountEl.textContent = totalSelected;
+    }
 
-            if (!filetypeId || !vectorQualityId) {
-                alert("Please select all required options.");
-                return;
-            }
+    // Row checkboxes
+    checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+            updateSelection();
+            topCheckbox.checked = [...checkboxes].every(c => c.checked);
+        });
+    });
 
-            const formData = new FormData();
-            formData.append("file", fileInput.files[0]);
-            formData.append("filetype_id", filetypeId);
-            formData.append("vectorstore_quality_id", vectorQualityId);
-            formData.append("is_vectorized", isVectorized);
+    // Top checkbox
+    topCheckbox.addEventListener('change', () => {
+        const checked = topCheckbox.checked;
+        checkboxes.forEach(cb => cb.checked = checked);
+        updateSelection();
+    });
 
-            const response = await fetch(`/folders/${folderId}/files`, {
-                method: "POST",
+    // Clear selection
+    clearBtn.addEventListener('click', () => {
+        checkboxes.forEach(cb => cb.checked = false);
+        topCheckbox.checked = false;
+        updateSelection();
+    });
+
+    // Modal
+    const chatbotModal = document.getElementById('chatbotModal');
+    const openModalBtn = document.getElementById('openChatbotModal');
+    const closeModalBtn = document.getElementById('closeChatbotModal');
+    const chatbotForm = document.getElementById('chatbotForm');
+
+    openModalBtn.addEventListener('click', () => chatbotModal.classList.remove('hidden'));
+    closeModalBtn.addEventListener('click', () => chatbotModal.classList.add('hidden'));
+
+    // Submit chatbot
+    chatbotForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(chatbotForm);
+
+        // Append selected files and folders as arrays
+        selected.files.forEach(id => formData.append('files_id[]', id));
+        selected.folders.forEach(id => formData.append('folder_id[]', id));
+
+        try {
+            const response = await fetch("{{ route('chatbots.store') }}", {
+                method: 'POST',
                 headers: {
-                    "X-CSRF-TOKEN": csrfToken
+                    'X-CSRF-TOKEN': document.querySelector('input[name=_token]').value,
+                    'Accept': 'application/json'
                 },
                 body: formData
             });
 
-            if (!response.ok) throw new Error("Upload failed");
-        }
+            const data = await response.json();
 
-        // ======================
-        // CREATE FOLDER
-        // ======================
-        else {
-
-            const name = document.getElementById("folderName").value.trim();
-
-            if (!name) {
-                alert("Folder name is required.");
-                return;
+            if (response.ok) {
+                alert('Chatbot created successfully!');
+                chatbotModal.classList.add('hidden');
+                chatbotForm.reset();
+                checkboxes.forEach(cb => cb.checked = false);
+                topCheckbox.checked = false;
+                updateSelection();
+            } else {
+                console.error(data);
+                alert('Error creating chatbot!');
             }
-
-            const formData = new FormData();
-            formData.append("name", name);
-
-            if (folderId) {
-                formData.append("parent_id", folderId);
-            }
-
-            const response = await fetch(`/folders`, {
-                method: "POST",
-                headers: {
-                    "X-CSRF-TOKEN": csrfToken
-                },
-                body: formData
-            });
-
-            if (!response.ok) throw new Error("Folder creation failed");
+        } catch (err) {
+            console.error(err);
+            alert('Something went wrong!');
         }
-
-        closeModal();
-        location.reload();
-
-    } catch (error) {
-        console.error(error);
-        alert("Something went wrong.");
-    }
-});
+    });
 </script>
+        <!-- Attach Modal -->
+        <div id="attachModal" class="modal-overlay">
+
+            <div class="card w-full max-w-md p-6 relative">
+
+                <!-- Header -->
+                <div class="flex items-center justify-between mb-6">
+                    <h2 id="modalTitle" class="font-display text-xl font-semibold">
+                        Attach
+                    </h2>
+
+                    <button type="button"
+                        onclick="closeModal()"
+                        class="text-[var(--fg-muted)] hover:text-[var(--fg-primary)] transition">
+                        ✕
+                    </button>
+                </div>
+
+                <form id="attachForm" class="space-y-5">
+
+                    <!-- FILE SECTION -->
+                    <div id="fileSection" class="hidden space-y-4">
+
+                        <!-- File -->
+                        <div>
+                            <label class="text-sm text-[var(--fg-secondary)] block mb-2">
+                                Select File
+                            </label>
+
+                            <input type="file"
+                                id="fileInput"
+                                name="file"
+                                class="input-field cursor-pointer" />
+                        </div>
+
+                        <!-- File Type -->
+                        <div>
+                            <label class="text-sm text-[var(--fg-secondary)] block mb-2">
+                                File Type
+                            </label>
+
+                            <select id="filetype_id" class="input-field">
+                                <option value="">Select Type</option>
+                                @foreach($fileTypes as $type)
+                                <option value="{{ $type->id }}">
+                                    {{ $type->name }}
+                                </option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <!-- Vectorstore Quality -->
+                        <div>
+                            <label class="text-sm text-[var(--fg-secondary)] block mb-2">
+                                Vectorstore Quality
+                            </label>
+
+                            <select id="vectorstore_quality_id" class="input-field">
+                                <option value="">Select Quality</option>
+                                @foreach($vectorQualities as $quality)
+                                <option value="{{ $quality->id }}">
+                                    {{ $quality->name }}
+                                </option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <!-- Is Vectorized -->
+                        <div>
+                            <label class="text-sm text-[var(--fg-secondary)] block mb-2">
+                                Vectorize File?
+                            </label>
+
+                            <select id="is_vectorized" class="input-field">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <!-- FOLDER SECTION -->
+                    <div id="folderSection" class="hidden">
+                        <label class="text-sm text-[var(--fg-secondary)] block mb-2">
+                            Folder Name
+                        </label>
+
+                        <input type="text"
+                            id="folderName"
+                            name="name"
+                            placeholder="Enter folder name..."
+                            class="input-field" />
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex justify-end gap-3 pt-2">
+                        <button type="button"
+                            onclick="closeModal()"
+                            class="btn-ghost">
+                            Cancel
+                        </button>
+
+                        <button type="submit"
+                            class="btn-primary">
+                            Confirm
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <script>
+            const attachSelect = document.getElementById("attachSelect");
+            const modal = document.getElementById("attachModal");
+            const fileSection = document.getElementById("fileSection");
+            const folderSection = document.getElementById("folderSection");
+            const modalTitle = document.getElementById("modalTitle");
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+            function getCurrentFolderId() {
+                const params = new URLSearchParams(window.location.search);
+                return params.get('folder_id');
+            }
+
+            attachSelect.addEventListener("change", function() {
+
+                if (this.value === "file") {
+                    openModal();
+                    fileSection.classList.remove("hidden");
+                    folderSection.classList.add("hidden");
+                    modalTitle.innerText = "Upload File";
+                }
+
+                if (this.value === "folder") {
+                    openModal();
+                    folderSection.classList.remove("hidden");
+                    fileSection.classList.add("hidden");
+                    modalTitle.innerText = "Create Folder";
+                }
+
+                this.value = "";
+            });
+
+            function openModal() {
+                modal.classList.add("active");
+            }
+
+            function closeModal() {
+                modal.classList.remove("active");
+                document.getElementById("attachForm").reset();
+            }
+
+            modal.addEventListener("click", function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener("keydown", function(e) {
+                if (e.key === "Escape") {
+                    closeModal();
+                }
+            });
+
+            document.getElementById("attachForm").addEventListener("submit", async function(e) {
+                e.preventDefault();
+
+                const folderId = getCurrentFolderId();
+                const isFileUpload = !fileSection.classList.contains("hidden");
+
+                try {
+
+                    // ======================
+                    // FILE UPLOAD
+                    // ======================
+                    if (isFileUpload) {
+
+                        if (!folderId) {
+                            alert("Open a folder before uploading a file.");
+                            return;
+                        }
+
+                        const fileInput = document.getElementById("fileInput");
+                        const filetypeId = document.getElementById("filetype_id").value;
+                        const vectorQualityId = document.getElementById("vectorstore_quality_id").value;
+                        const isVectorized = document.getElementById("is_vectorized").value;
+
+                        if (!fileInput.files.length) {
+                            alert("Please select a file.");
+                            return;
+                        }
+
+                        if (!filetypeId || !vectorQualityId) {
+                            alert("Please select all required options.");
+                            return;
+                        }
+
+                        const formData = new FormData();
+                        formData.append("file", fileInput.files[0]);
+                        formData.append("filetype_id", filetypeId);
+                        formData.append("vectorstore_quality_id", vectorQualityId);
+                        formData.append("is_vectorized", isVectorized);
+
+                        const response = await fetch(`/folders/${folderId}/files`, {
+                            method: "POST",
+                            headers: {
+                                "X-CSRF-TOKEN": csrfToken
+                            },
+                            body: formData
+                        });
+
+                        if (!response.ok) throw new Error("Upload failed");
+                    }
+
+                    // ======================
+                    // CREATE FOLDER
+                    // ======================
+                    else {
+
+                        const name = document.getElementById("folderName").value.trim();
+
+                        if (!name) {
+                            alert("Folder name is required.");
+                            return;
+                        }
+
+                        const formData = new FormData();
+                        formData.append("name", name);
+
+                        if (folderId) {
+                            formData.append("parent_id", folderId);
+                        }
+
+                        const response = await fetch(`/folders`, {
+                            method: "POST",
+                            headers: {
+                                "X-CSRF-TOKEN": csrfToken
+                            },
+                            body: formData
+                        });
+
+                        if (!response.ok) throw new Error("Folder creation failed");
+                    }
+
+                    closeModal();
+                    location.reload();
+
+                } catch (error) {
+                    console.error(error);
+                    alert("Something went wrong.");
+                }
+            });
+        </script>
     </main>
 </x-app-layout>

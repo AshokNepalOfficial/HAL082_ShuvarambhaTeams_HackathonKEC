@@ -30,6 +30,7 @@ class FileController extends Controller
             'filetype_id' => $request->filetype_id,
             'vectorstore_quality_id' => $request->vectorstore_quality_id,
             'is_vectorized' => $request->is_vectorized,
+            'filesize'=>$file->getSize(), // fixed method call
         ]);
 
         // Return JSON for modal handling

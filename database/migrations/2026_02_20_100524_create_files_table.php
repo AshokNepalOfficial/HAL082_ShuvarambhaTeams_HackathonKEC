@@ -21,6 +21,8 @@ return new class extends Migration
             $table->boolean('is_vectorized')->default(false);
             $table->string('path');
             $table->unsignedBigInteger('folder_id');
+                // File size in bytes
+            $table->unsignedBigInteger('filesize');
             $table->timestamps();
 
             // Foreign keys
