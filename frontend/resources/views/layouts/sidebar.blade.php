@@ -7,15 +7,13 @@
     <!-- Logo -->
     <div class="py-2 px-4 h-16 border-b border-[var(--border)]">
         <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-[var(--accent)] flex items-center justify-center glow-accent">
-                <svg class="w-6 h-6 text-[var(--bg-primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                </svg>
-            </div>
-            <div>
-                <h1 class="font-display font-bold text-lg">Command</h1>
-                <p class="text-xs text-[var(--fg-muted)]">Admin Panel</p>
-            </div>
+
+        <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bot" aria-hidden="true" class="lucide lucide-bot w-6 h-6 text-bg-primary"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight">Shuvarambha</span>
+                </div>
         </div>
     </div>
 

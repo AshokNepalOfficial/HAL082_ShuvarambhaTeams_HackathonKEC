@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\File;
@@ -8,10 +9,10 @@ use App\Models\VectorstoreQuality;
 use App\Services\AIVectorService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class FileController extends Controller
 {
-
     protected $aiVectorService;
 
     public function __construct(AIVectorService $aiVectorService)
@@ -21,9 +22,8 @@ class FileController extends Controller
 
     public function store(Request $request, Folder $folder)
     {
-        // Validation
-        $request->validate([
-            'file' => 'required|file|max:10240', // 10MB max
+        $validated = $request->validate([
+            'file' => 'required|file|max:10240',
             'filetype_id' => 'required|exists:file_type,id',
             'vectorstore_quality_id' => 'required|exists:vectorstore_quality,id',
             'is_vectorized' => 'required|boolean',
@@ -31,42 +31,58 @@ class FileController extends Controller
 
         $file = $request->file('file');
 
-        if ($request->is_vectorized == 1) {
-            $quality = VectorstoreQuality::findOrFail($request->vectorstore_quality_id)->name;
-            $type = FileType::findOrFail($request->filetype_id)->name;
-        } else {
-            $quality = null;
-            $type = null;
+        // Get extension safely (based on MIME type)
+        $extension = $file->extension(); // safer than getClientOriginalExtension()
+
+        // Generate unique filename and keep extension
+        $filename = Str::uuid() . '.' . $extension;
+
+        // Store file
+        $path = $file->storeAs(
+            'uploads/' . $folder->id,
+            $filename,
+            'public'
+        );
+
+        $configuration = null;
+
+        if ($request->boolean('is_vectorized')) {
+            $quality = VectorstoreQuality::findOrFail($validated['vectorstore_quality_id'])->name;
+            $type = FileType::findOrFail($validated['filetype_id'])->name;
+
+            $configuration = $this->aiVectorService->indexFile(
+                $path,
+                $quality,
+                $type
+            );
         }
 
-        // Store file in public disk under folder ID
-        $path = $file->store('uploads/' . $folder->id, 'public');
-
-        // Only index if vectorized
-        $configuration = $request->is_vectorized ? $this->aiVectorService->indexFile($path, $quality, $type) : null;
-
-        // Save in database with additional fields
+        // Save to database
         $folder->files()->create([
-            'filename' => $file->getClientOriginalName(),
+            'filename' => $file->getClientOriginalName(), // keep original name for display
             'path' => $path,
-            'filetype_id' => $request->filetype_id,
-            'vectorstore_quality_id' => $request->vectorstore_quality_id,
-            'is_vectorized' => $request->is_vectorized,
+            'filetype_id' => $validated['filetype_id'],
+            'vectorstore_quality_id' => $validated['vectorstore_quality_id'],
+            'is_vectorized' => $request->boolean('is_vectorized'),
             'filesize' => $file->getSize(),
             'configuration' => $configuration ? json_encode($configuration) : null,
         ]);
 
-        // Return JSON for modal handling
         return response()->json([
             'success' => true,
             'message' => 'File uploaded successfully!',
         ]);
     }
-    // Rename file
+
     public function rename(Request $request, File $file)
     {
-        $request->validate(['filename' => 'required|string|max:255']);
-        $file->update(['filename' => $request->filename]);
+        $request->validate([
+            'filename' => 'required|string|max:255'
+        ]);
+
+        $file->update([
+            'filename' => $request->filename
+        ]);
 
         return response()->json([
             'success' => true,
@@ -74,13 +90,12 @@ class FileController extends Controller
         ]);
     }
 
-    // Delete file
     public function destroy(File $file)
     {
-        // Delete from storage
-        Storage::disk('public')->delete($file->path);
+        if (Storage::disk('public')->exists($file->path)) {
+            Storage::disk('public')->delete($file->path);
+        }
 
-        // Delete database record
         $file->delete();
 
         return response()->json([

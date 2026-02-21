@@ -11,7 +11,7 @@ class AIVectorService
         // $absolutePath = storage_path('app/' . $path);
 
         // 2. Call FastAPI
-        $response = Http::asForm()->post('http://localhost:8003/vectorize', [
+        $response = Http::timeout(360)->asForm()->post('http://localhost:8003/vectorize', [
             'file_path' => $file,
             'embedding_quality' => $quality,
             'file_type' => $type,

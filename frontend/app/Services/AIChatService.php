@@ -8,7 +8,7 @@ class AIChatService
     {
 
         // 2. Call FastAPI
-        $response = Http::post('http://localhost:8003/chat', [
+        $response = Http::timeout(360)->post('http://localhost:8003/chat', [
             'query' => $query,
             'file_group_ids' => $vectorGroupIds,
             'history' => $history, // Laravel sends the past messages
